@@ -1,2 +1,1 @@
-This project os build based on Autoformer[https://github.com/thuml/Autoformer] project:
-https://github.com/thuml/Autoformer
+This project os build based on Autoformer[https://github.com/thuml/Autoformer] project.
