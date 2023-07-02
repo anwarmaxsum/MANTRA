@@ -1,0 +1,281 @@
+Args in experiment:
+Namespace(is_training=1, model_id='Exchange_E3k_96_720', model='B6autoformer', slow_model='AutoformerS1', data='custom', root_path='./dataset/exchange_rate/', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints3/', seq_len=96, label_len=48, pred_len=720, bucket_size=4, n_hashes=4, enc_in=8, dec_in=8, c_out=8, d_model=256, n_learner=3, n_heads=8, urt_heads=1, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=3, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=3, train_epochs=20, batch_size=32, patience=3, learning_rate=0.001, anomaly=10.0, des='Exp', loss='mse', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1', fix_seed='2023')
+Use GPU: cuda:0
+Check c_out
+8
+Check c_out
+8
+Check c_out
+8
+[CREATE] 3 learners of Autoformer
+stdev: 0.00389789473592771
+stdev: 0.009013802066105327
+stdev: 0.0062924702990542645
+stdev: 0.0021393648415386213
+stdev: 0.0022720710031736715
+stdev: 0.005211060330473793
+stdev: 0.0011988069545634107
+stdev: 0.0075454724139043545
+stdev: 0.0057194860804500045
+stdev: 0.005904417149294411
+stdev: 0.005107359343831957
+stdev: 0.005512440381976261
+stdev: 0.004550216975213523
+stdev: 0.0023605507292126858
+stdev: 0.004247876594197319
+stdev: 0.0024586930618065903
+stdev: 0.004041628237529124
+stdev: 0.0026229095268389944
+stdev: 0.004518922610259292
+stdev: 0.0013208338936367935
+stdev: 0.006083754840266261
+stdev: 0.002831153426857548
+stdev: 0.003885440118990134
+stdev: 0.0043890740448641035
+stdev: 0.002656487276448098
+stdev: 0.0019355665271763543
+stdev: 0.00509434502092531
+stdev: 0.002762774537423048
+stdev: 0.004406728802978894
+stdev: 0.009374787633533964
+stdev: 0.007841437418818487
+stdev: 0.007936878138929144
+stdev: 0.006370305015692377
+stdev: 0.00812459032495573
+stdev: 0.008293044732903869
+stdev: 0.00982501503183741
+stdev: 0.008963067286477621
+stdev: 0.0019882101292753767
+>>>>>>>start training URT: Exchange_E3k_96_720_B6autoformer_custom_ftM_sl96_ll48_pl720_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+Train URT layer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+Best MSE: 10000000000.0
+	iters: 100, epoch: 1 | loss: 0.9077010
+	speed: 0.4763s/iter; left time: 1286.4619s
+Epoch: 1 cost time: 65.03240537643433
+Update Best URT params
+Epoch: 1, Steps: 140 | Train Loss: 0.8598912 Vali Loss: 0.9889058 Test Loss: 1.1560807
+Validation loss decreased (inf --> 0.988906).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.8241706
+	speed: 0.6697s/iter; left time: 1715.1259s
+Epoch: 2 cost time: 59.875815629959106
+Update Best URT params
+Epoch: 2, Steps: 140 | Train Loss: 0.8577796 Vali Loss: 0.9861882 Test Loss: 1.1559032
+Validation loss decreased (0.988906 --> 0.986188).  Saving model ...
+	iters: 100, epoch: 3 | loss: 0.7612380
+	speed: 0.6648s/iter; left time: 1609.3908s
+Epoch: 3 cost time: 59.8113694190979
+Update Best URT params
+Epoch: 3, Steps: 140 | Train Loss: 0.8582099 Vali Loss: 0.9825782 Test Loss: 1.1592349
+Validation loss decreased (0.986188 --> 0.982578).  Saving model ...
+	iters: 100, epoch: 4 | loss: 0.7912662
+	speed: 0.6952s/iter; left time: 1585.7801s
+Epoch: 4 cost time: 66.12102270126343
+Epoch: 4, Steps: 140 | Train Loss: 0.8579286 Vali Loss: 0.9843874 Test Loss: 1.1580768
+EarlyStopping counter: 1 out of 3
+	iters: 100, epoch: 5 | loss: 0.9202394
+	speed: 0.6911s/iter; left time: 1479.6390s
+Epoch: 5 cost time: 59.378435373306274
+Update Best URT params
+Epoch: 5, Steps: 140 | Train Loss: 0.8588449 Vali Loss: 0.9823185 Test Loss: 1.1598908
+Validation loss decreased (0.982578 --> 0.982318).  Saving model ...
+	iters: 100, epoch: 6 | loss: 0.9654928
+	speed: 0.6567s/iter; left time: 1314.0693s
+Epoch: 6 cost time: 59.45652747154236
+Epoch: 6, Steps: 140 | Train Loss: 0.8579830 Vali Loss: 0.9824802 Test Loss: 1.1565586
+EarlyStopping counter: 1 out of 3
+	iters: 100, epoch: 7 | loss: 0.8317752
+	speed: 0.6644s/iter; left time: 1236.4935s
+Epoch: 7 cost time: 59.44504761695862
+Update Best URT params
+Epoch: 7, Steps: 140 | Train Loss: 0.8577013 Vali Loss: 0.9814668 Test Loss: 1.1597712
+Validation loss decreased (0.982318 --> 0.981467).  Saving model ...
+	iters: 100, epoch: 8 | loss: 0.8010627
+	speed: 0.6550s/iter; left time: 1127.2071s
+Epoch: 8 cost time: 62.80734634399414
+Epoch: 8, Steps: 140 | Train Loss: 0.8578183 Vali Loss: 0.9866664 Test Loss: 1.1557231
+EarlyStopping counter: 1 out of 3
+	iters: 100, epoch: 9 | loss: 0.8309601
+	speed: 0.7011s/iter; left time: 1108.4630s
+Epoch: 9 cost time: 59.75452423095703
+Epoch: 9, Steps: 140 | Train Loss: 0.8581154 Vali Loss: 0.9856930 Test Loss: 1.1581721
+EarlyStopping counter: 2 out of 3
+	iters: 100, epoch: 10 | loss: 0.9155447
+	speed: 0.6598s/iter; left time: 950.7041s
+Epoch: 10 cost time: 59.77451753616333
+Epoch: 10, Steps: 140 | Train Loss: 0.8578819 Vali Loss: 0.9826576 Test Loss: 1.1581627
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing FastSlow+URT : Exchange_E3k_96_720_B6autoformer_custom_ftM_sl96_ll48_pl720_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (798, 720, 8) (798, 720, 8)
+mse:1.1604152917861938, mae:0.8391290903091431
+Use GPU: cuda:0
+Check c_out
+8
+Check c_out
+8
+Check c_out
+8
+[CREATE] 3 learners of Autoformer
+stdev: 0.008377396846064557
+stdev: 0.0037685160134432335
+stdev: 0.0033534520018520136
+stdev: 0.004651511897972907
+stdev: 0.0059807834357843105
+stdev: 0.006629737969635403
+stdev: 0.0017088422226270309
+stdev: 0.009750550838549834
+stdev: 0.004701799488894027
+stdev: 0.007494979629638079
+stdev: 0.0069695873238060976
+stdev: 0.002964027383766686
+stdev: 0.0026845528338548886
+stdev: 0.0075680131488307465
+stdev: 0.008769819366784014
+stdev: 0.004525483277957965
+stdev: 0.0019904330214741035
+stdev: 0.009215123532215028
+stdev: 0.004213053899166476
+stdev: 0.00471665961836313
+stdev: 0.002651947243965037
+stdev: 0.006273912429908084
+stdev: 0.008701037619831889
+stdev: 0.008107130937207881
+stdev: 0.0017905818133238257
+stdev: 0.009396939452102501
+stdev: 0.005499560265466813
+stdev: 0.00427831290271721
+stdev: 0.005352455714557049
+stdev: 0.005637021321999348
+stdev: 0.009951791209076886
+stdev: 0.007780630990366405
+stdev: 0.004292379242223742
+stdev: 0.006502357732507919
+stdev: 0.004776502149535791
+stdev: 0.0018250904989186452
+stdev: 0.005813685268892471
+stdev: 0.004066877967828311
+>>>>>>>start training URT: Exchange_E3k_96_720_B6autoformer_custom_ftM_sl96_ll48_pl720_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+Train URT layer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+Best MSE: 10000000000.0
+	iters: 100, epoch: 1 | loss: 0.7614275
+	speed: 0.4381s/iter; left time: 1183.2713s
+Epoch: 1 cost time: 60.561548471450806
+Update Best URT params
+Epoch: 1, Steps: 140 | Train Loss: 0.8668296 Vali Loss: 0.9948423 Test Loss: 1.1902299
+Validation loss decreased (inf --> 0.994842).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.8571895
+	speed: 0.6832s/iter; left time: 1749.7082s
+Epoch: 2 cost time: 61.63250684738159
+Epoch: 2, Steps: 140 | Train Loss: 0.8658949 Vali Loss: 0.9954302 Test Loss: 1.1925286
+EarlyStopping counter: 1 out of 3
+	iters: 100, epoch: 3 | loss: 0.8934045
+	speed: 0.6597s/iter; left time: 1597.1388s
+Epoch: 3 cost time: 59.843140840530396
+Epoch: 3, Steps: 140 | Train Loss: 0.8655044 Vali Loss: 0.9959762 Test Loss: 1.1938075
+EarlyStopping counter: 2 out of 3
+	iters: 100, epoch: 4 | loss: 0.8519253
+	speed: 0.6690s/iter; left time: 1526.0475s
+Epoch: 4 cost time: 59.90045237541199
+Epoch: 4, Steps: 140 | Train Loss: 0.8658894 Vali Loss: 0.9985646 Test Loss: 1.1922536
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing FastSlow+URT : Exchange_E3k_96_720_B6autoformer_custom_ftM_sl96_ll48_pl720_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (798, 720, 8) (798, 720, 8)
+mse:1.1908961534500122, mae:0.8577325940132141
+Use GPU: cuda:0
+Check c_out
+8
+Check c_out
+8
+Check c_out
+8
+[CREATE] 3 learners of Autoformer
+stdev: 0.0011650689180082222
+stdev: 0.006431073584825836
+stdev: 0.009296255556933971
+stdev: 0.0035322771822149926
+stdev: 0.008513208830001034
+stdev: 0.005946603917867569
+stdev: 0.0011961191436278358
+stdev: 0.00412353900576364
+stdev: 0.005950313122404854
+stdev: 0.0011188506801521948
+stdev: 0.0074430343649941446
+stdev: 0.0027079930481982636
+stdev: 0.007682203661959859
+stdev: 0.006664882330555672
+stdev: 0.004259655370821585
+stdev: 0.00664326451334338
+stdev: 0.005633962771652832
+stdev: 0.009054165861432033
+stdev: 0.005667988831155426
+stdev: 0.006466682624266456
+stdev: 0.005273343986990874
+stdev: 0.007386316292472245
+stdev: 0.002037184386106846
+stdev: 0.007595146617364617
+stdev: 0.00890238282297522
+stdev: 0.005671575591892068
+stdev: 0.00712447093627573
+stdev: 0.004920022416427312
+stdev: 0.009745868992401152
+stdev: 0.004286721395051589
+stdev: 0.0066044169297078585
+stdev: 0.0033246408939077436
+stdev: 0.007132089628265548
+stdev: 0.00888932737378869
+stdev: 0.0031804164498893846
+stdev: 0.0022836897491352237
+stdev: 0.008428502005730955
+stdev: 0.0051889613250137865
+>>>>>>>start training URT: Exchange_E3k_96_720_B6autoformer_custom_ftM_sl96_ll48_pl720_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+Train URT layer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+Best MSE: 10000000000.0
+	iters: 100, epoch: 1 | loss: 0.7724798
+	speed: 0.4283s/iter; left time: 1156.9489s
+Epoch: 1 cost time: 60.031986713409424
+Update Best URT params
+Epoch: 1, Steps: 140 | Train Loss: 0.8632782 Vali Loss: 1.0181725 Test Loss: 1.1510564
+Validation loss decreased (inf --> 1.018173).  Saving model ...
+	iters: 100, epoch: 2 | loss: 0.7951626
+	speed: 0.6698s/iter; left time: 1715.4746s
+Epoch: 2 cost time: 59.994529008865356
+Epoch: 2, Steps: 140 | Train Loss: 0.8625854 Vali Loss: 1.0185670 Test Loss: 1.1513200
+EarlyStopping counter: 1 out of 3
+	iters: 100, epoch: 3 | loss: 1.0234706
+	speed: 0.6936s/iter; left time: 1679.1413s
+Epoch: 3 cost time: 61.888243675231934
+Update Best URT params
+Epoch: 3, Steps: 140 | Train Loss: 0.8635422 Vali Loss: 1.0178101 Test Loss: 1.1510555
+Validation loss decreased (1.018173 --> 1.017810).  Saving model ...
+	iters: 100, epoch: 4 | loss: 0.8313044
+	speed: 0.6700s/iter; left time: 1528.2729s
+Epoch: 4 cost time: 60.178741216659546
+Epoch: 4, Steps: 140 | Train Loss: 0.8627429 Vali Loss: 1.0184267 Test Loss: 1.1512370
+EarlyStopping counter: 1 out of 3
+	iters: 100, epoch: 5 | loss: 0.8511568
+	speed: 0.6638s/iter; left time: 1421.2293s
+Epoch: 5 cost time: 59.46578311920166
+Epoch: 5, Steps: 140 | Train Loss: 0.8631275 Vali Loss: 1.0181670 Test Loss: 1.1512841
+EarlyStopping counter: 2 out of 3
+	iters: 100, epoch: 6 | loss: 0.9157405
+	speed: 0.6610s/iter; left time: 1322.6775s
+Epoch: 6 cost time: 59.796568393707275
+Epoch: 6, Steps: 140 | Train Loss: 0.8621185 Vali Loss: 1.0195367 Test Loss: 1.1508979
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing FastSlow+URT : Exchange_E3k_96_720_B6autoformer_custom_ftM_sl96_ll48_pl720_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (798, 720, 8) (798, 720, 8)
+mse:1.1516478061676025, mae:0.8444201946258545

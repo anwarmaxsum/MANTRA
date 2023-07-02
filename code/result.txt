@@ -1,0 +1,12 @@
+ETTh2_96_24_Autoformer_ETTh2_ftM_sl96_ll48_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0  
+mse:0.28490859270095825, mae:0.3632263243198395
+
+ETTh2_96_24_Autoformer_ETTh2_ftM_sl96_ll48_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0  
+mse:0.29882311820983887, mae:0.36788052320480347
+
+ETTh2_96_24_Bautoformer_ETTh2_ftM_sl96_ll48_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0  
+mse:0.3112465441226959, mae:0.39322662353515625
+
+ETTh2_96_24_Uautoformer_ETTh2_ftM_sl96_ll48_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0  
+mse:3.225550413131714, mae:1.3835710287094116
+

@@ -1,0 +1,581 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ili_E3k_UniVar_36_36', model='B6autoformer', slow_model='AutoformerS1', data='custom', root_path='./dataset/illness/', data_path='national_illness.csv', features='S', target='OT', freq='h', checkpoints='./checkpoints1/', seq_len=36, label_len=18, pred_len=36, bucket_size=4, n_hashes=4, enc_in=1, dec_in=1, c_out=1, d_model=256, n_learner=3, n_heads=8, urt_heads=1, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=3, distil=True, dropout=0.2, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=3, train_epochs=20, batch_size=32, patience=3, learning_rate=0.001, anomaly=10.0, des='Exp', loss='mse', lradj='type1', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1', fix_seed='2023')
+Use GPU: cuda:0
+Check c_out
+1
+Check c_out
+1
+Check c_out
+1
+[CREATE] 3 learners of Autoformer
+stdev: 0.00389789473592771
+stdev: 0.009013802066105327
+stdev: 0.0062924702990542645
+stdev: 0.0021393648415386213
+stdev: 0.0022720710031736715
+stdev: 0.005211060330473793
+stdev: 0.0011988069545634107
+stdev: 0.0075454724139043545
+stdev: 0.0057194860804500045
+stdev: 0.005904417149294411
+stdev: 0.005107359343831957
+stdev: 0.005512440381976261
+stdev: 0.004550216975213523
+stdev: 0.0023605507292126858
+stdev: 0.004247876594197319
+stdev: 0.0024586930618065903
+stdev: 0.004041628237529124
+stdev: 0.0026229095268389944
+stdev: 0.004518922610259292
+stdev: 0.0013208338936367935
+stdev: 0.006083754840266261
+stdev: 0.002831153426857548
+stdev: 0.003885440118990134
+stdev: 0.0043890740448641035
+stdev: 0.002656487276448098
+stdev: 0.0019355665271763543
+stdev: 0.00509434502092531
+stdev: 0.002762774537423048
+stdev: 0.004406728802978894
+stdev: 0.009374787633533964
+stdev: 0.007841437418818487
+stdev: 0.007936878138929144
+stdev: 0.006370305015692377
+stdev: 0.00812459032495573
+stdev: 0.008293044732903869
+stdev: 0.00982501503183741
+stdev: 0.008963067286477621
+stdev: 0.0019882101292753767
+>>>>>>>start training : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 605
+val 62
+test 158
+Epoch: 1 cost time: 6.722843885421753
+Epoch: 1, Steps: 18 | Train Loss: 0.2987270 Vali Loss: 0.1755033 Test Loss: 0.9055895
+Validation loss decreased (inf --> 0.175503).  Saving model ...
+Updating learning rate to 0.001
+Epoch: 2 cost time: 4.044983386993408
+Epoch: 2, Steps: 18 | Train Loss: 0.1805219 Vali Loss: 0.1417006 Test Loss: 0.8423313
+Validation loss decreased (0.175503 --> 0.141701).  Saving model ...
+Updating learning rate to 0.0005
+Epoch: 3 cost time: 4.773010015487671
+Epoch: 3, Steps: 18 | Train Loss: 0.1343885 Vali Loss: 0.0921225 Test Loss: 0.7345896
+Validation loss decreased (0.141701 --> 0.092123).  Saving model ...
+Updating learning rate to 0.00025
+Epoch: 4 cost time: 4.301645755767822
+Epoch: 4, Steps: 18 | Train Loss: 0.1081966 Vali Loss: 0.0874343 Test Loss: 0.6998270
+Validation loss decreased (0.092123 --> 0.087434).  Saving model ...
+Updating learning rate to 0.000125
+Epoch: 5 cost time: 4.346825122833252
+Epoch: 5, Steps: 18 | Train Loss: 0.1004938 Vali Loss: 0.0786011 Test Loss: 0.6874481
+Validation loss decreased (0.087434 --> 0.078601).  Saving model ...
+Updating learning rate to 6.25e-05
+Epoch: 6 cost time: 4.30059027671814
+Epoch: 6, Steps: 18 | Train Loss: 0.0987633 Vali Loss: 0.0771819 Test Loss: 0.6661432
+Validation loss decreased (0.078601 --> 0.077182).  Saving model ...
+Updating learning rate to 3.125e-05
+Epoch: 7 cost time: 4.226223945617676
+Epoch: 7, Steps: 18 | Train Loss: 0.0957336 Vali Loss: 0.0742586 Test Loss: 0.6750781
+Validation loss decreased (0.077182 --> 0.074259).  Saving model ...
+Updating learning rate to 1.5625e-05
+Epoch: 8 cost time: 4.182827949523926
+Epoch: 8, Steps: 18 | Train Loss: 0.0937807 Vali Loss: 0.0683500 Test Loss: 0.6820837
+Validation loss decreased (0.074259 --> 0.068350).  Saving model ...
+Updating learning rate to 7.8125e-06
+Epoch: 9 cost time: 4.138274908065796
+Epoch: 9, Steps: 18 | Train Loss: 0.0925889 Vali Loss: 0.0716313 Test Loss: 0.6826442
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.90625e-06
+Epoch: 10 cost time: 4.039366960525513
+Epoch: 10, Steps: 18 | Train Loss: 0.0927636 Vali Loss: 0.0690842 Test Loss: 0.6840552
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.953125e-06
+Epoch: 11 cost time: 4.012613296508789
+Epoch: 11, Steps: 18 | Train Loss: 0.0919221 Vali Loss: 0.0667039 Test Loss: 0.6830103
+Validation loss decreased (0.068350 --> 0.066704).  Saving model ...
+Updating learning rate to 9.765625e-07
+Epoch: 12 cost time: 4.096802473068237
+Epoch: 12, Steps: 18 | Train Loss: 0.0913266 Vali Loss: 0.0710998 Test Loss: 0.6827554
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 4.8828125e-07
+Epoch: 13 cost time: 3.564192056655884
+Epoch: 13, Steps: 18 | Train Loss: 0.0919565 Vali Loss: 0.0708238 Test Loss: 0.6824201
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.44140625e-07
+Epoch: 14 cost time: 3.5588901042938232
+Epoch: 14, Steps: 18 | Train Loss: 0.0916031 Vali Loss: 0.0726737 Test Loss: 0.6828488
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 158
+test shape: (158, 36, 1) (158, 36, 1)
+mse:0.6744127869606018, mae:0.6393964886665344
+Test learner: 0 test 158
+mse:2.511521339416504, mae:1.0082396268844604
+Test learner: 1 test 158
+mse:1.4542255401611328, mae:0.9034894108772278
+Test learner: 2 test 158
+mse:1.243812918663025, mae:0.9180389642715454
+Use GPU: cuda:0
+Check c_out
+1
+Check c_out
+1
+Check c_out
+1
+[CREATE] 3 learners of Autoformer
+stdev: 0.008377396846064557
+stdev: 0.0037685160134432335
+stdev: 0.0033534520018520136
+stdev: 0.004651511897972907
+stdev: 0.0059807834357843105
+stdev: 0.006629737969635403
+stdev: 0.0017088422226270309
+stdev: 0.009750550838549834
+stdev: 0.004701799488894027
+stdev: 0.007494979629638079
+stdev: 0.0069695873238060976
+stdev: 0.002964027383766686
+stdev: 0.0026845528338548886
+stdev: 0.0075680131488307465
+stdev: 0.008769819366784014
+stdev: 0.004525483277957965
+stdev: 0.0019904330214741035
+stdev: 0.009215123532215028
+stdev: 0.004213053899166476
+stdev: 0.00471665961836313
+stdev: 0.002651947243965037
+stdev: 0.006273912429908084
+stdev: 0.008701037619831889
+stdev: 0.008107130937207881
+stdev: 0.0017905818133238257
+stdev: 0.009396939452102501
+stdev: 0.005499560265466813
+stdev: 0.00427831290271721
+stdev: 0.005352455714557049
+stdev: 0.005637021321999348
+stdev: 0.009951791209076886
+stdev: 0.007780630990366405
+stdev: 0.004292379242223742
+stdev: 0.006502357732507919
+stdev: 0.004776502149535791
+stdev: 0.0018250904989186452
+stdev: 0.005813685268892471
+stdev: 0.004066877967828311
+>>>>>>>start training : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 605
+val 62
+test 158
+Epoch: 1 cost time: 4.0931236743927
+Epoch: 1, Steps: 18 | Train Loss: 0.2784714 Vali Loss: 0.2230813 Test Loss: 0.9221988
+Validation loss decreased (inf --> 0.223081).  Saving model ...
+Updating learning rate to 0.001
+Epoch: 2 cost time: 4.119524955749512
+Epoch: 2, Steps: 18 | Train Loss: 0.2175121 Vali Loss: 0.1252809 Test Loss: 1.2060730
+Validation loss decreased (0.223081 --> 0.125281).  Saving model ...
+Updating learning rate to 0.0005
+Epoch: 3 cost time: 4.132361173629761
+Epoch: 3, Steps: 18 | Train Loss: 0.1313709 Vali Loss: 0.0890891 Test Loss: 0.7788864
+Validation loss decreased (0.125281 --> 0.089089).  Saving model ...
+Updating learning rate to 0.00025
+Epoch: 4 cost time: 4.153627157211304
+Epoch: 4, Steps: 18 | Train Loss: 0.1052498 Vali Loss: 0.0727029 Test Loss: 0.7453018
+Validation loss decreased (0.089089 --> 0.072703).  Saving model ...
+Updating learning rate to 0.000125
+Epoch: 5 cost time: 4.172647476196289
+Epoch: 5, Steps: 18 | Train Loss: 0.0965727 Vali Loss: 0.0620364 Test Loss: 0.7428023
+Validation loss decreased (0.072703 --> 0.062036).  Saving model ...
+Updating learning rate to 6.25e-05
+Epoch: 6 cost time: 4.075146675109863
+Epoch: 6, Steps: 18 | Train Loss: 0.0935110 Vali Loss: 0.0705557 Test Loss: 0.7503352
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-05
+Epoch: 7 cost time: 3.956411838531494
+Epoch: 7, Steps: 18 | Train Loss: 0.0906672 Vali Loss: 0.0615606 Test Loss: 0.7293303
+Validation loss decreased (0.062036 --> 0.061561).  Saving model ...
+Updating learning rate to 1.5625e-05
+Epoch: 8 cost time: 3.6349852085113525
+Epoch: 8, Steps: 18 | Train Loss: 0.0888858 Vali Loss: 0.0590036 Test Loss: 0.7406431
+Validation loss decreased (0.061561 --> 0.059004).  Saving model ...
+Updating learning rate to 7.8125e-06
+Epoch: 9 cost time: 3.796537160873413
+Epoch: 9, Steps: 18 | Train Loss: 0.0889445 Vali Loss: 0.0543066 Test Loss: 0.7384677
+Validation loss decreased (0.059004 --> 0.054307).  Saving model ...
+Updating learning rate to 3.90625e-06
+Epoch: 10 cost time: 4.247754096984863
+Epoch: 10, Steps: 18 | Train Loss: 0.0885417 Vali Loss: 0.0547149 Test Loss: 0.7373300
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.953125e-06
+Epoch: 11 cost time: 3.8217430114746094
+Epoch: 11, Steps: 18 | Train Loss: 0.0888461 Vali Loss: 0.0602686 Test Loss: 0.7350119
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 9.765625e-07
+Epoch: 12 cost time: 3.872572898864746
+Epoch: 12, Steps: 18 | Train Loss: 0.0881253 Vali Loss: 0.0608641 Test Loss: 0.7345281
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 158
+test shape: (158, 36, 1) (158, 36, 1)
+mse:0.7277176976203918, mae:0.6397739052772522
+Test learner: 0 test 158
+mse:0.9425917863845825, mae:0.8147369027137756
+Test learner: 1 test 158
+mse:2.94589900970459, mae:0.985113263130188
+Test learner: 2 test 158
+mse:1.0374916791915894, mae:0.8116700649261475
+Use GPU: cuda:0
+Check c_out
+1
+Check c_out
+1
+Check c_out
+1
+[CREATE] 3 learners of Autoformer
+stdev: 0.0011650689180082222
+stdev: 0.006431073584825836
+stdev: 0.009296255556933971
+stdev: 0.0035322771822149926
+stdev: 0.008513208830001034
+stdev: 0.005946603917867569
+stdev: 0.0011961191436278358
+stdev: 0.00412353900576364
+stdev: 0.005950313122404854
+stdev: 0.0011188506801521948
+stdev: 0.0074430343649941446
+stdev: 0.0027079930481982636
+stdev: 0.007682203661959859
+stdev: 0.006664882330555672
+stdev: 0.004259655370821585
+stdev: 0.00664326451334338
+stdev: 0.005633962771652832
+stdev: 0.009054165861432033
+stdev: 0.005667988831155426
+stdev: 0.006466682624266456
+stdev: 0.005273343986990874
+stdev: 0.007386316292472245
+stdev: 0.002037184386106846
+stdev: 0.007595146617364617
+stdev: 0.00890238282297522
+stdev: 0.005671575591892068
+stdev: 0.00712447093627573
+stdev: 0.004920022416427312
+stdev: 0.009745868992401152
+stdev: 0.004286721395051589
+stdev: 0.0066044169297078585
+stdev: 0.0033246408939077436
+stdev: 0.007132089628265548
+stdev: 0.00888932737378869
+stdev: 0.0031804164498893846
+stdev: 0.0022836897491352237
+stdev: 0.008428502005730955
+stdev: 0.0051889613250137865
+>>>>>>>start training : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 605
+val 62
+test 158
+Epoch: 1 cost time: 3.9877657890319824
+Epoch: 1, Steps: 18 | Train Loss: 0.3379289 Vali Loss: 0.2176604 Test Loss: 0.9225596
+Validation loss decreased (inf --> 0.217660).  Saving model ...
+Updating learning rate to 0.001
+Epoch: 2 cost time: 4.2409467697143555
+Epoch: 2, Steps: 18 | Train Loss: 0.2287736 Vali Loss: 0.0917166 Test Loss: 0.7665808
+Validation loss decreased (0.217660 --> 0.091717).  Saving model ...
+Updating learning rate to 0.0005
+Epoch: 3 cost time: 4.1462647914886475
+Epoch: 3, Steps: 18 | Train Loss: 0.1233513 Vali Loss: 0.0710551 Test Loss: 0.7133507
+Validation loss decreased (0.091717 --> 0.071055).  Saving model ...
+Updating learning rate to 0.00025
+Epoch: 4 cost time: 3.807898998260498
+Epoch: 4, Steps: 18 | Train Loss: 0.0985905 Vali Loss: 0.0653209 Test Loss: 0.6648391
+Validation loss decreased (0.071055 --> 0.065321).  Saving model ...
+Updating learning rate to 0.000125
+Epoch: 5 cost time: 3.552276849746704
+Epoch: 5, Steps: 18 | Train Loss: 0.0952726 Vali Loss: 0.0592898 Test Loss: 0.7029533
+Validation loss decreased (0.065321 --> 0.059290).  Saving model ...
+Updating learning rate to 6.25e-05
+Epoch: 6 cost time: 3.8673901557922363
+Epoch: 6, Steps: 18 | Train Loss: 0.0925155 Vali Loss: 0.0538319 Test Loss: 0.6802292
+Validation loss decreased (0.059290 --> 0.053832).  Saving model ...
+Updating learning rate to 3.125e-05
+Epoch: 7 cost time: 4.152571201324463
+Epoch: 7, Steps: 18 | Train Loss: 0.0906458 Vali Loss: 0.0604413 Test Loss: 0.6845472
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.5625e-05
+Epoch: 8 cost time: 4.396305561065674
+Epoch: 8, Steps: 18 | Train Loss: 0.0916249 Vali Loss: 0.0581780 Test Loss: 0.6690989
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 7.8125e-06
+Epoch: 9 cost time: 3.9668610095977783
+Epoch: 9, Steps: 18 | Train Loss: 0.0894152 Vali Loss: 0.0534874 Test Loss: 0.6685491
+Validation loss decreased (0.053832 --> 0.053487).  Saving model ...
+Updating learning rate to 3.90625e-06
+Epoch: 10 cost time: 3.754939079284668
+Epoch: 10, Steps: 18 | Train Loss: 0.0890160 Vali Loss: 0.0603478 Test Loss: 0.6712005
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.953125e-06
+Epoch: 11 cost time: 4.2179694175720215
+Epoch: 11, Steps: 18 | Train Loss: 0.0899230 Vali Loss: 0.0584608 Test Loss: 0.6728317
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 9.765625e-07
+Epoch: 12 cost time: 4.30873966217041
+Epoch: 12, Steps: 18 | Train Loss: 0.0879332 Vali Loss: 0.0528119 Test Loss: 0.6726549
+Validation loss decreased (0.053487 --> 0.052812).  Saving model ...
+Updating learning rate to 4.8828125e-07
+Epoch: 13 cost time: 3.854290246963501
+Epoch: 13, Steps: 18 | Train Loss: 0.0885248 Vali Loss: 0.0602837 Test Loss: 0.6721287
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.44140625e-07
+Epoch: 14 cost time: 3.7708544731140137
+Epoch: 14, Steps: 18 | Train Loss: 0.0907478 Vali Loss: 0.0581425 Test Loss: 0.6721964
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.220703125e-07
+Epoch: 15 cost time: 3.6790876388549805
+Epoch: 15, Steps: 18 | Train Loss: 0.0868812 Vali Loss: 0.0615067 Test Loss: 0.6722369
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 158
+test shape: (158, 36, 1) (158, 36, 1)
+mse:0.6641771793365479, mae:0.6241745352745056
+Test learner: 0 test 158
+mse:1.509459137916565, mae:1.0152146816253662
+Test learner: 1 test 158
+mse:1.292921781539917, mae:0.8549290299415588
+Test learner: 2 test 158
+mse:3.1491830348968506, mae:1.1093910932540894
+Use GPU: cuda:0
+Check c_out
+1
+Check c_out
+1
+Check c_out
+1
+[CREATE] 3 learners of Autoformer
+stdev: 0.0040435480756849575
+stdev: 0.009402813584933889
+stdev: 0.005089631143355978
+stdev: 0.005448386699276298
+stdev: 0.0014131585762210013
+stdev: 0.0020707073998624736
+stdev: 0.005841607456447519
+stdev: 0.001493055964133239
+stdev: 0.003704688448286261
+stdev: 0.004402757713752216
+stdev: 0.006480962759697463
+stdev: 0.008414428831214824
+stdev: 0.0026460533528884123
+stdev: 0.008082095550588086
+stdev: 0.0038024873107643338
+stdev: 0.007943626678150583
+stdev: 0.009234545181900405
+stdev: 0.003036445563629472
+stdev: 0.009920439227526324
+stdev: 0.0038031994650529768
+stdev: 0.008970750596564325
+stdev: 0.007242648894589634
+stdev: 0.001490722533978015
+stdev: 0.0028163694934197235
+stdev: 0.00873240227592173
+stdev: 0.00694681045314295
+stdev: 0.008855081094057221
+stdev: 0.007513703699165961
+stdev: 0.001827446662939766
+stdev: 0.0011976944599024545
+stdev: 0.002638440948158871
+stdev: 0.0034852161694518707
+stdev: 0.007059999489706122
+stdev: 0.00613427377696895
+stdev: 0.004395762422816739
+stdev: 0.0035606167405881754
+stdev: 0.002823993072755853
+stdev: 0.00397841073416727
+>>>>>>>start training URT: ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+Train URT layer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 605
+val 62
+test 158
+Best MSE: 10000000000.0
+Epoch: 1 cost time: 2.5717411041259766
+Update Best URT params
+Epoch: 1, Steps: 18 | Train Loss: 0.1022857 Vali Loss: 0.0687919 Test Loss: 0.7519425
+Validation loss decreased (inf --> 0.068792).  Saving model ...
+Epoch: 2 cost time: 2.541990280151367
+Epoch: 2, Steps: 18 | Train Loss: 0.1021351 Vali Loss: 0.0744530 Test Loss: 0.7017495
+EarlyStopping counter: 1 out of 3
+Epoch: 3 cost time: 3.0317578315734863
+Update Best URT params
+Epoch: 3, Steps: 18 | Train Loss: 0.1024022 Vali Loss: 0.0663030 Test Loss: 0.6719579
+Validation loss decreased (0.068792 --> 0.066303).  Saving model ...
+Epoch: 4 cost time: 2.691523551940918
+Epoch: 4, Steps: 18 | Train Loss: 0.1019192 Vali Loss: 0.0670428 Test Loss: 0.6804104
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 2.448624610900879
+Epoch: 5, Steps: 18 | Train Loss: 0.1012539 Vali Loss: 0.0690746 Test Loss: 0.6570131
+EarlyStopping counter: 2 out of 3
+Epoch: 6 cost time: 2.5722880363464355
+Epoch: 6, Steps: 18 | Train Loss: 0.1011263 Vali Loss: 0.0691843 Test Loss: 0.6513689
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing FastSlow+URT : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 158
+test shape: (158, 36, 1) (158, 36, 1)
+mse:0.6637894511222839, mae:0.6314199566841125
+Use GPU: cuda:0
+Check c_out
+1
+Check c_out
+1
+Check c_out
+1
+[CREATE] 3 learners of Autoformer
+stdev: 0.0042808587230366395
+stdev: 0.0028234384947666406
+stdev: 0.006426592856368131
+stdev: 0.0015666237959113694
+stdev: 0.007583301422937549
+stdev: 0.0076045976661121215
+stdev: 0.006311352189153682
+stdev: 0.007452157032140526
+stdev: 0.007418486467806796
+stdev: 0.007982823597325788
+stdev: 0.007156453573165013
+stdev: 0.00818107833254179
+stdev: 0.006300900794710145
+stdev: 0.0087374688445465
+stdev: 0.004979929427326386
+stdev: 0.004491869918672758
+stdev: 0.003530137591452979
+stdev: 0.0018579698383583564
+stdev: 0.004901020555393326
+stdev: 0.007085464410959132
+stdev: 0.0032563542868208222
+stdev: 0.0040567829206616035
+stdev: 0.006719029937464292
+stdev: 0.007128856247841697
+stdev: 0.004152032303254075
+stdev: 0.005553610170122295
+stdev: 0.004707060556511586
+stdev: 0.0076803528583990295
+stdev: 0.002304681616882927
+stdev: 0.007580956287707459
+stdev: 0.005638575534216023
+stdev: 0.003993610189887777
+stdev: 0.009330527683911374
+stdev: 0.009760566603429548
+stdev: 0.00603585480018269
+stdev: 0.001916998169316187
+stdev: 0.0070487111303112245
+stdev: 0.009376417330829077
+>>>>>>>start training URT: ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+Train URT layer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 605
+val 62
+test 158
+Best MSE: 10000000000.0
+Epoch: 1 cost time: 2.910839080810547
+Update Best URT params
+Epoch: 1, Steps: 18 | Train Loss: 0.0946576 Vali Loss: 0.0608431 Test Loss: 0.7921461
+Validation loss decreased (inf --> 0.060843).  Saving model ...
+Epoch: 2 cost time: 2.785494327545166
+Update Best URT params
+Epoch: 2, Steps: 18 | Train Loss: 0.0969965 Vali Loss: 0.0574634 Test Loss: 0.7849825
+Validation loss decreased (0.060843 --> 0.057463).  Saving model ...
+Epoch: 3 cost time: 2.5798227787017822
+Epoch: 3, Steps: 18 | Train Loss: 0.0969370 Vali Loss: 0.0613201 Test Loss: 0.7745336
+EarlyStopping counter: 1 out of 3
+Epoch: 4 cost time: 2.568223237991333
+Update Best URT params
+Epoch: 4, Steps: 18 | Train Loss: 0.0962481 Vali Loss: 0.0547252 Test Loss: 0.7514203
+Validation loss decreased (0.057463 --> 0.054725).  Saving model ...
+Epoch: 5 cost time: 2.506939649581909
+Epoch: 5, Steps: 18 | Train Loss: 0.0959103 Vali Loss: 0.0617852 Test Loss: 0.7409920
+EarlyStopping counter: 1 out of 3
+Epoch: 6 cost time: 2.5960683822631836
+Epoch: 6, Steps: 18 | Train Loss: 0.0951808 Vali Loss: 0.0580857 Test Loss: 0.7376444
+EarlyStopping counter: 2 out of 3
+Epoch: 7 cost time: 2.7163169384002686
+Epoch: 7, Steps: 18 | Train Loss: 0.0953352 Vali Loss: 0.0573528 Test Loss: 0.7335392
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing FastSlow+URT : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 158
+test shape: (158, 36, 1) (158, 36, 1)
+mse:0.7397262454032898, mae:0.6385813355445862
+Use GPU: cuda:0
+Check c_out
+1
+Check c_out
+1
+Check c_out
+1
+[CREATE] 3 learners of Autoformer
+stdev: 0.0035668865672155953
+stdev: 0.0020608504838862036
+stdev: 0.008653460689915857
+stdev: 0.007260126464970977
+stdev: 0.009096712331068756
+stdev: 0.009476542441457021
+stdev: 0.0056470240360343375
+stdev: 0.007253809346852582
+stdev: 0.004883289095696004
+stdev: 0.008865450137393299
+stdev: 0.0068958067696628005
+stdev: 0.0018259990394759195
+stdev: 0.003640881387783723
+stdev: 0.003671529032511444
+stdev: 0.004001384044156965
+stdev: 0.002061214059206999
+stdev: 0.00630607430266911
+stdev: 0.005385761593035615
+stdev: 0.0019330568466263006
+stdev: 0.0036480190271133196
+stdev: 0.0066437063489144955
+stdev: 0.0016611641676015847
+stdev: 0.002516175249459441
+stdev: 0.007369719946290036
+stdev: 0.0063511188026476395
+stdev: 0.005628800985083237
+stdev: 0.005818564498524979
+stdev: 0.003332552853647164
+stdev: 0.006994906747097796
+stdev: 0.001253748680053103
+stdev: 0.007158257097549597
+stdev: 0.006257416307763041
+stdev: 0.006030380024144336
+stdev: 0.0022584976136135783
+stdev: 0.0021508918060897807
+stdev: 0.005901494288322307
+stdev: 0.006094700802544767
+stdev: 0.008340136802729064
+>>>>>>>start training URT: ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+Train URT layer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 605
+val 62
+test 158
+Best MSE: 10000000000.0
+Epoch: 1 cost time: 2.704639196395874
+Update Best URT params
+Epoch: 1, Steps: 18 | Train Loss: 0.0942404 Vali Loss: 0.0532949 Test Loss: 0.6873516
+Validation loss decreased (inf --> 0.053295).  Saving model ...
+Epoch: 2 cost time: 2.6187541484832764
+Epoch: 2, Steps: 18 | Train Loss: 0.0939909 Vali Loss: 0.0578050 Test Loss: 0.6733319
+EarlyStopping counter: 1 out of 3
+Epoch: 3 cost time: 2.4179399013519287
+Update Best URT params
+Epoch: 3, Steps: 18 | Train Loss: 0.0935010 Vali Loss: 0.0451260 Test Loss: 0.7015196
+Validation loss decreased (0.053295 --> 0.045126).  Saving model ...
+Epoch: 4 cost time: 2.4319980144500732
+Epoch: 4, Steps: 18 | Train Loss: 0.0948400 Vali Loss: 0.0499967 Test Loss: 0.7272173
+EarlyStopping counter: 1 out of 3
+Epoch: 5 cost time: 2.680377244949341
+Epoch: 5, Steps: 18 | Train Loss: 0.0946695 Vali Loss: 0.0455879 Test Loss: 0.7578648
+EarlyStopping counter: 2 out of 3
+Epoch: 6 cost time: 3.1430811882019043
+Epoch: 6, Steps: 18 | Train Loss: 0.0937220 Vali Loss: 0.0600729 Test Loss: 0.7819892
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing FastSlow+URT : ili_E3k_UniVar_36_36_B6autoformer_custom_ftS_sl36_ll18_pl36_dm256_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 158
+test shape: (158, 36, 1) (158, 36, 1)
+mse:0.6922054290771484, mae:0.6397901177406311

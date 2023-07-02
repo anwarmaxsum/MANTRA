@@ -1,0 +1,21 @@
+
+python -u run_ori.py \
+  --is_training 1 \
+  --root_path ./dataset/illness/ \
+  --data_path national_illness.csv \
+  --model_id ili_Autoformer_36_60_Univar \
+  --model AutoformerMod2 \
+  --data custom \
+  --features M \
+  --seq_len 36 \
+  --label_len 18 \
+  --pred_len 60 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 1 \
+  --des 'Exp' \
+  --itr 1
